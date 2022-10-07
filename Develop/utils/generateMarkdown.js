@@ -45,7 +45,9 @@ function renderLicenseSection(license) {
 }
 
 function generateMarkdown(data) {
-  return`# ${data.projectTitle}\n
+  return`
+    ${renderLicenseBadge(data.license)}\n
+    # ${data.projectTitle}\n
     ## Description of the Project
     ${data.description}\n
     ## Installation Instructions\n
@@ -59,7 +61,7 @@ function generateMarkdown(data) {
     ${data.contribute}\n
     ## Contactn\n
     ${data.emailAddress}\n
-    ${data.github}\n
+    [${data.username}](https://github.com/${data.username})\n
   `
 }
 
