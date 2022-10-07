@@ -21,7 +21,7 @@ function writeToFile(fileName, data) {
 
 function init() {
     inquirer
-        .promt([
+        .prompt([
             {
                 type: 'input',
                 message: questions[0],
