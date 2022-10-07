@@ -30,7 +30,7 @@ function init() {
             {
                 type: 'input',
                 message: questions[1],
-                name: 'Username'
+                name: 'github'
             },
             {
                 type: 'input',
@@ -63,13 +63,14 @@ function init() {
                 name:'instructions'
             },
             {
-                type: 'input',
+                type: 'list',
                 message: questions[8],
                 name:'license',
+                choices: ['MIT', 'MPL 2.0', 'IPL 1.0', 'None']
             },
 
         ])
-    .then((data)=>{
+    .then((data) => {
         writeToFile(generateMarkdown(data));
     })
 }
