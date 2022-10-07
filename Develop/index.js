@@ -8,7 +8,8 @@ const questions = [
     'Project Title:',
     'GitHub Username:',
     'Email Address:',
-    'Enter Instructions Here:',
+    'Enter Project Description here:',
+    'Enter Install Instructions Here:',
     'Enter Usage Information Here:',
     'Enter Contribution Information Here:',
     'Enter Instructions Here:',
@@ -22,7 +23,57 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer
+        .promt([
+            {
+                type: 'input',
+                message: questions[0],
+                name: 'projectTitle'
+            },
+            {
+                type: 'input',
+                message: questions[1],
+                name: 'Username'
+            },
+            {
+                type: 'input',
+                message: questions[2],
+                name: 'emailAddress'
+            },
+            {
+                type: 'input',
+                message: questions[3],
+                name:'description'
+            },
+            {
+                type: 'input',
+                message: questions[4],
+                name:'install'
+            },
+            {
+                type: 'input',
+                message: questions[5],
+                name:'usage'
+            },
+            {
+                type: 'input',
+                message: questions[6],
+                name:'contribute'
+            },
+            {
+                type: 'input',
+                message: questions[7],
+                name:'instructions'
+            },
+            {
+                type: 'input',
+                message: questions[8],
+                name:'license',
+            },
+
+        ])
+}
 
 // Function call to initialize app
 init();
