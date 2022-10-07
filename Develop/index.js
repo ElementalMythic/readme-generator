@@ -9,9 +9,8 @@ const questions = [
     'Enter Project Description here:',
     'Enter Install Instructions Here:',
     'Enter Usage Information Here:',
-    'Enter Contribution Information Here:',
-    'Enter Instructions Here:',
     'Select License:',
+    'Enter Contribution Information Here:',
 ];
 
 function writeToFile(fileName, data) {
@@ -53,23 +52,20 @@ function init() {
                 name:'usage'
             },
             {
-                type: 'input',
-                message: questions[6],
-                name:'contribute'
-            },
-            {
-                type: 'input',
-                message: questions[7],
-                name:'instructions'
-            },
-            {
                 type: 'list',
-                message: questions[8],
+                message: questions[6],
                 name:'license',
                 choices: ['MIT', 'MPL 2.0', 'IPL 1.0', 'None']
             },
 
+            {
+                type: 'input',
+                message: questions[7],
+                name:'contribute'
+            },
+
         ])
+
     .then((data) => {
         writeToFile(generateMarkdown(data));
     })

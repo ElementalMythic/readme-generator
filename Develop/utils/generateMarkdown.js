@@ -59,7 +59,7 @@ function generateMarkdown(data) {
     ${renderLicenseSection(data.license)}\n
     ### Contribution Guide\n
     ${data.contribute}\n
-    ## Contactn\n
+    ## Contact\n
     ${data.emailAddress}\n
     [${data.username}](https://github.com/${data.username})\n
   `
