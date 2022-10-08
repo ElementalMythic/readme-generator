@@ -13,8 +13,8 @@ const questions = [
     'Enter Contribution Information Here:',
 ];
 
-function writeToFile(fileName, data) {
-    fs.writeToFile('README.md', data,
+function writeToFile(data) {
+    fs.writeFile('README.md', data,
     (err) => err ? console.log("Error") : console.log('README.md Successfully Created'));
 }
 
